@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "8a11bad4-3d5a-4f89-980c-2c2ce1a4ed0a",
+		"name": "API POSTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11720178"
+	},
+	"item": [
+		{
+			"name": "1. list all posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|xcLW5fyLDAXy2DYeLh8Oqh4erqSUmlYWXh22eHNG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://yoripe.test/api/posts",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				},
+				"description": "list all post on db"
+			},
+			"response": []
+		},
+		{
+			"name": "2. create new post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|xcLW5fyLDAXy2DYeLh8Oqh4erqSUmlYWXh22eHNG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "artikel milik user no 3 schimmel.leonard@example.net",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "body artikel user no 3 si schimmel.leonard@example.net",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/Users/rickysutanto/Pictures/rupiah.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/posts/create",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"posts",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. post query (show)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|xcLW5fyLDAXy2DYeLh8Oqh4erqSUmlYWXh22eHNG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://yoripe.test/api/posts/1",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Update post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8|ZRH3YoByTSWxZFq4QRHzIWKWffWoUXop1XNCE4AP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Percobaan update oleh admin",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "ini isi body untuk update post 5 diupdate baru ",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"type": "file",
+							"src": "/Users/rickysutanto/Pictures/PAS FOTO RICKY.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/posts/6",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"posts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. delete post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|VZiMZOv6TeT07ymr26CfuFZGQJIE4oxOMN3iBXRP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://yoripe.test/api/posts/5",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"posts",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

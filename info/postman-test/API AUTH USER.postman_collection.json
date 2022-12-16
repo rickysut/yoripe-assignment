@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "782c8621-9129-4b07-afd6-793ff3685c2d",
+		"name": "API AUTH USER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11720178"
+	},
+	"item": [
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|P9U3yxvNCoXHrWN2iKTEQbWkijzFOtVHOWFrqfKj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://yoripe.test/api/logout",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "user logout and delete user token frrom db"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "manager@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/login",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "login and get user access_token"
+			},
+			"response": []
+		},
+		{
+			"name": "forgot-password",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@email.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/forgot-password",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"forgot-password"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ricky@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "1",
+							"description": "1=admin, 2=manager, 3=user",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Ricky Sutanto",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/register",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset-password",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://yoripe.test/api/reset-password?email=admin@email.com&token=ab33f7c000456a45433339b52cc838505ce229aa64a2dc646f572d9ee28b8c59&password=abc123d4&password_confirmation=abc123d4",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"reset-password"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@email.com"
+						},
+						{
+							"key": "token",
+							"value": "ab33f7c000456a45433339b52cc838505ce229aa64a2dc646f572d9ee28b8c59"
+						},
+						{
+							"key": "password",
+							"value": "abc123d4"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "abc123d4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users list (admin privilege)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|VZiMZOv6TeT07ymr26CfuFZGQJIE4oxOMN3iBXRP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://yoripe.test/api/list-users",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"list-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users (admin privilege)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|xcLW5fyLDAXy2DYeLh8Oqh4erqSUmlYWXh22eHNG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://yoripe.test/api/get-user/1",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"get-user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user (admin privilege)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|VZiMZOv6TeT07ymr26CfuFZGQJIE4oxOMN3iBXRP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user 10",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "carroll87@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abc123d4",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/update-user/3",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"update-user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new user (admin privilege)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8|ZRH3YoByTSWxZFq4QRHzIWKWffWoUXop1XNCE4AP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json ",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "17|KizdUUdNJsTwY5BCSGbdQgLNROrPyhiF6XBP4CVU",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user 3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user3@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yoripe.test/api/create-user",
+					"protocol": "http",
+					"host": [
+						"yoripe",
+						"test"
+					],
+					"path": [
+						"api",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
